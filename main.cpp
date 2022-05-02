@@ -33,24 +33,23 @@ cin >> k1;
 cin >> binarystr2;
 cin >> k2;
 
-//create the Individuals
-Individual * person1 = new Individual(binarystr1);
-Individual * person2 = new Individual(binarystr2);
 
-//create the mutators 
+Individual * I1 = new Individual(binarystr1);
+Individual * I2 = new Individual(binarystr2);
+
 Mutator * bitflip = new BitFlip();
 Mutator * rearrange = new Rearrange();
 
-//create the offsprings
-Individual * offspring1 = new Individual(1);
-Individual * offspring2 = new Individual(1);
-offspring1 = execute(person1, bitflip, k1);
-offspring2 = execute(person2, rearrange, k2);
+Individual * o1 = new Individual(1);
+Individual * o2 = new Individual(1);
+
+o1 = execute(I1, bitflip, k1);
+o2 = execute(I2, rearrange, k2);
 
 
-cout << offspring1->getString() << " ";
-cout << offspring2->getString() << " ";
-cout << offspring2->getMaxOnes() << endl;
+cout << o1->getString() << " ";
+cout << o2->getString() << " ";
+cout << o2->getMaxOnes() << endl;
 
 
 }

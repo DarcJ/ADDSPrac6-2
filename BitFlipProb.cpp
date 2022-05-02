@@ -20,12 +20,12 @@ BitFlipProb::BitFlipProb(double prob){
 	prob = p;
 }
 
-Individual BitFlipProb::mutate(Individual person, int k) {
+Individual BitFlipProb::mutate(Individual I, int k) {
 
 
 //initialises an individual to get mutated 
-	string personString = person.getString(); 
-	Individual offspring(personString);
+	string DNAstrand = I.getString(); 
+	Individual offspring(DNAstrand);
 
 	for (int i =1; i < offspring.getLength()+1; i++ ) {
 		//create a random number 

@@ -8,42 +8,42 @@ using namespace std;
 Individual::Individual(int length){
 //sets all the values in DNA to zeros 
 	for (int i =0; i < length; i++) {
-		DNA.push_back('0');
+		binaryString.push_back('0');
 	}
 }
 
-Individual::Individual(std::string binaryString) {
+Individual::Individual(std::string bString) {
 //copies te string 
-	DNA = binaryString;
+	binaryString = bString;
 }
 
 string Individual::getString() {
 //returns the DNA string 
-	return DNA;
+	return binaryString;
 }
 
 int Individual::getBit(int pos) {
 //gets the bit on a specified position in DNA
-	if (pos > DNA.length()) {
+	if (pos > binaryString.length()) {
 		return -1;
 	} else {
-		return DNA.at(pos-1) - '0';
+		return binaryString.at(pos-1) - '0';
 	}
 }
 
 void Individual::flipBit(int pos) {
 //flips the bit on a specified position in DNA
 	if (pos == 0) {
-		pos = DNA.length();
+		pos = binaryString.length();
 	}
 
-	if (pos <= DNA.length()) {
-		switch(DNA.at(pos-1)) {
+	if (pos <= binaryString.length()) {
+		switch(binaryString.at(pos-1)) {
 			case '0':
-				DNA.at(pos-1) = '1';
+				binaryString.at(pos-1) = '1';
 				break;
 			case '1':
-				DNA.at(pos-1) = '0';
+				binaryString.at(pos-1) = '0';
 				break;
 		}
 	}

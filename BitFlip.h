@@ -12,7 +12,7 @@ class BitFlip : public Mutator {
 private:
 
 public:
-	Individual mutate(Individual person, int k);
+	Individual mutate(Individual I, int k);
 
 };
 

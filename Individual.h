@@ -7,7 +7,7 @@
 class Individual {
 
 private:
-	std::string DNA;
+	std::string binaryString;
 public:
 	Individual(int length);
 	Individual(std::string binaryString);

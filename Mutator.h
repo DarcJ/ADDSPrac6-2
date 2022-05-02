@@ -12,7 +12,7 @@ private:
 
 public:
 	Mutator();
-	virtual Individual mutate(Individual person, int k);
+	virtual Individual mutate(Individual I, int k);
 	~Mutator();
 };
 

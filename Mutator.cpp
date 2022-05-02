@@ -10,8 +10,8 @@ Mutator::Mutator() {
 
 }
 
-Individual Mutator::mutate(Individual person, int k) {
-	return person;
+Individual Mutator::mutate(Individual I, int k) {
+	return I;
 }
 
 Mutator::~Mutator() {

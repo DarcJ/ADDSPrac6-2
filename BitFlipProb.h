@@ -14,7 +14,7 @@ private:
 public:
 	BitFlipProb();
 	BitFlipProb(double prob);
-	Individual mutate(Individual person, int k);
+	Individual mutate(Individual I, int k);
 };
 
 #endif 

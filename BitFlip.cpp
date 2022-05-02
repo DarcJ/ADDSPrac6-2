@@ -7,11 +7,11 @@
 
 using namespace std;
 
-Individual BitFlip::mutate(Individual person, int k) {
+Individual BitFlip::mutate(Individual I, int k) {
 
 //this creates an Individual that will be mutated
-	string personString = person.getString(); 
-	Individual offspring(personString);
+	string DNAstrand = I.getString(); 
+	Individual offspring(DNAstrand);
 
 	if (k <= offspring.getLength()) {
 		offspring.flipBit(k);
